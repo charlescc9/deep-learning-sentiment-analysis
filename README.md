@@ -1,6 +1,6 @@
 # deep-learning-sentiment-analysis
 
-deep-learning-sentiment-analysis is an NLP sentiment analysis project. It aimed to correctly classify IMDB movie reviews as either positive or negative. It uses gensim for document embedding and TensorFlow's API TFLearn for classification. 
+deep-learning-sentiment-analysis is an NLP project that uses deep learning for sentiment analysis. It aims to correctly classify IMDB movie reviews as either positive or negative. It uses gensim for document embedding and TensorFlow's API TFLearn for classification. 
 
 ## Data
 deep-learning-sentiment-analysis uses Stanford's [Large Movie Review Dataset] (http://ai.stanford.edu/~amaas/data/sentiment/). This dataset was designed for NLP sentiment analysis and published by [Maas et al] (http://ai.stanford.edu/~amaas/papers/wvSent_acl2011.pdf). It consists of 12,500 positive train, negative train, positive test, and negative test reviews, along with 50,000 unlabeled reviews for unsupervised learning, for 100,000 total reviews.
