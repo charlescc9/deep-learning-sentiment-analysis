@@ -13,3 +13,6 @@ deep-learning-sentiment-analysis is written in Python 2.7 in a Jupyter notebook 
 * [TFLearn] (http://tflearn.org/)
 * [NumPy] (http://www.numpy.org/)
 * [BeautifulSoup] (https://www.crummy.com/software/BeautifulSoup/)
+
+## License
+This project uses the [Apache 2.0 License] (https://github.com/charlescc9/deep-learning-sentiment-analysis/blob/master/LICENSE).
