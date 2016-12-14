@@ -3,6 +3,7 @@ import edu.stanford.nlp.neural.rnn.RNNCoreAnnotations;
 import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.sentiment.SentimentCoreAnnotations;
+import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.util.CoreMap;
 import org.apache.log4j.BasicConfigurator;
 
@@ -39,9 +40,7 @@ public class SentimentAnalysis {
         StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
 
         List<Integer> review_sentiments = new ArrayList<>();
-        int numExamples = 10;
-        for (int i = 0; i < numExamples; i++) {
-
+        for (int i = 0; i < reviews.size(); i++) {
             // Initialize annotation
             Annotation annotation = new Annotation(reviews.get(i));
             pipeline.annotate(annotation);
@@ -49,12 +48,15 @@ public class SentimentAnalysis {
             // Get review sentiment by weighing each sentence sentiment by number of tokens in sentence
             int sentiment = 0;
             for (CoreMap sentence : annotation.get(CoreAnnotations.SentencesAnnotation.class)) {
-                sentiment += (RNNCoreAnnotations.getPredictedClass(sentence.get(SentimentCoreAnnotations.SentimentAnnotatedTree.class)) - 2) * sentence.get(CoreAnnotations.TokensAnnotation.class).size();
+                Tree sentiment_tree = sentence.get(SentimentCoreAnnotations.SentimentAnnotatedTree.class);
+                int sentence_sentiment = RNNCoreAnnotations.getPredictedClass(sentiment_tree) - 2;
+                int num_tokens = sentence.get(CoreAnnotations.TokensAnnotation.class).size();
+                sentiment += sentence_sentiment * num_tokens;
             }
             review_sentiments.add(sentiment);
 
             // Print inference progress
-            if (i % 100 == 0) {
+            if (i % 1000 == 0) {
                 System.out.println(i + " reviews processed");
             }
         }
@@ -68,8 +70,8 @@ public class SentimentAnalysis {
 
         double posAverage = posSentiment.stream().mapToInt(Integer::intValue).average().getAsDouble();
         double negAverage = negSentiment.stream().mapToInt(Integer::intValue).average().getAsDouble();
-        double posAccuracy = posSentiment.stream().filter(i -> i > 0).count() / (double) 10;
-        double negAccuracy = negSentiment.stream().filter(i -> i < 0).count() / (double) 10;
+        double posAccuracy = posSentiment.stream().filter(i -> i > 0).count() / (double) posSentiment.size();
+        double negAccuracy = negSentiment.stream().filter(i -> i < 0).count() / (double) negSentiment.size();
 
         System.out.println("\nStatistics:");
         System.out.println("Average weighted sentiment for positive reviews: " + posAverage);
