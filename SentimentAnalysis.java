@@ -74,10 +74,10 @@ public class SentimentAnalysis {
         double negAccuracy = negSentiment.stream().filter(i -> i < 0).count() / (double) negSentiment.size();
 
         System.out.println("\nStatistics:");
-        System.out.println("Average weighted sentiment for positive reviews: " + posAverage);
-        System.out.println("Average weighted sentiment for negative reviews: " + negAverage);
-        System.out.println("Accuracy for positive test set reviews: " + posAccuracy);
-        System.out.println("Accuracy for negative test set reviews: " + negAccuracy);
-        System.out.println("Accuracy for all test set reviews: " + (posAccuracy + negAccuracy) / 2);
+        System.out.println("Average weighted sentiment for positive reviews: " + posAverage);        // -44.51
+        System.out.println("Average weighted sentiment for negative reviews: " + negAverage);        // -198.69
+        System.out.println("Accuracy for positive test set reviews: " + posAccuracy);                // 43.18%
+        System.out.println("Accuracy for negative test set reviews: " + negAccuracy);                // 96.74%
+        System.out.println("Accuracy for all test set reviews: " + (posAccuracy + negAccuracy) / 2); // 69.96%
     }
 }
