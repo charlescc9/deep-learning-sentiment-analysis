@@ -8,6 +8,7 @@ deep-learning-sentiment-analysis uses Stanford's [Large Movie Review Dataset] (h
 ## Academic Background
 * [Maas et al] (http://ai.stanford.edu/~amaas/papers/wvSent_acl2011.pdf)
 * [Mikolov] (https://cs.stanford.edu/~quocle/paragraph_vector.pdf)
+* [Kim] (https://arxiv.org/pdf/1408.5882v2.pdf)
 
 ## Software Dependencies
 deep-learning-sentiment-analysis is written in Python 2.7 in a Jupyter notebook and uses several common software libraries, most notably gensim and TFLearn. In order to run it, you  must install the follow dependencies:
