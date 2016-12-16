@@ -2,7 +2,7 @@
 deep-learning-sentiment-analysis is an NLP project that compares three different models for binary sentiment classification. 
 
 ## Data
-deep-learning-sentiment-analysis uses Stanford's [Large Movie Review Dataset] (http://ai.stanford.edu/~amaas/data/sentiment/). It consists of sets for positive train, negative train, positive test, and negative test, all of which have 12,500 reviews, along with 50,000 unlabeled reviews for unsupervised learning, for 100,000 total reviews. Each review is comprised of multiple sentences.
+deep-learning-sentiment-analysis uses Stanford's [Large Movie Review Dataset] (http://ai.stanford.edu/~amaas/data/sentiment/). It consists of sets for positive train, negative train, positive test, and negative test, each of which has 12,500 reviews, along with 50,000 unlabeled reviews for unsupervised learning, for 100,000 total reviews. Each review is comprised of multiple sentences.
 
 ## Models
 deep-learning-sentiment-analysis utilizes three different models for sentiment analysis:
