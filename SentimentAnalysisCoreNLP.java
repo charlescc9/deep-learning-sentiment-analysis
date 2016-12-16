@@ -1,3 +1,9 @@
+/* Binary sentiment classification on IMDB movie reviews with Stanford CoreNLP
+ * Socher et al. 2013: nlp.stanford.edu/~socherr/EMNLP2013_RNTN.pdf
+ * Stanford CoreNLP Documentation: stanfordnlp.github.io/CoreNLP
+ * OPENSHIFT blog post: blog.openshift.com/day-20-stanford-corenlp-performing-sentiment-analysis-of-twitter-using-java
+ * Large Movie Review Dataset: ai.stanford.edu/~amaas/data/sentiment */
+
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.neural.rnn.RNNCoreAnnotations;
 import edu.stanford.nlp.pipeline.Annotation;
@@ -14,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-public class SentimentAnalysis {
+public class SentimentAnalysisCoreNLP {
 
     private static List<Integer> getSentiment(String path) throws IOException {
         // Configure logger
