@@ -11,11 +11,11 @@ deep-learning-sentiment-analysis utilizes three different models for sentiment a
 * Convolutional Neural network via [TensorFlow] (https://www.tensorflow.org/)
 
 ## Academic Background
-* Dataset: [Maas et al.] (http://ai.stanford.edu/~amaas/papers/wvSent_acl2011.pdf)
-* Recursive Neural Tensor Network: [Socher et al. 2013] (nlp.stanford.edu/~socherr/EMNLP2013_RNTN.pdf)
+* Dataset: [Maas et al. 2011] (http://ai.stanford.edu/~amaas/papers/wvSent_acl2011.pdf)
+* Recursive Neural Tensor Network: [Socher et al. 2013] (http://nlp.stanford.edu/~socherr/EMNLP2013_RNTN.pdf)
 * Word2Vec: [Mikolov et al. 2013] (https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf)
 * Doc2Vec: [Le and Mikolov 2014] (https://cs.stanford.edu/~quocle/paragraph_vector.pdf)
-* Convolutional Neural Network: [Kim] (https://arxiv.org/pdf/1408.5882v2.pdf)
+* Convolutional Neural Network: [Kim 2014] (https://arxiv.org/pdf/1408.5882v2.pdf)
 
 ## Software Dependencies
 deep-learning-sentiment-analysis is written in Python 2.7 in a Jupyter notebook and uses several common software libraries, most notably gensim and TFLearn. In order to run it, you  must install the follow dependencies:
