@@ -6,9 +6,9 @@ deep-learning-sentiment-analysis uses Stanford's [Large Movie Review Dataset] (h
 
 ## Models
 deep-learning-sentiment-analysis utilizes three different models for sentiment analysis:
-* Recursive Neural Tensor Network via [Stanford CoreNLP] (http://nlp.stanford.edu/sentiment/code.html)
-* Doc2Vec embedding via [gensim] (https://radimrehurek.com/gensim/models/doc2vec.html)
-* Convolutional Neural network via [TensorFlow] (https://www.tensorflow.org/)
+* SentimentAnalysisCoreNLP.java: Recursive Neural Tensor Network via [Stanford CoreNLP] (http://nlp.stanford.edu/sentiment/code.html)
+* sentiment_analysis_gensim.ipynb: Doc2Vec embedding via [gensim] (https://radimrehurek.com/gensim/models/doc2vec.html)
+* sentiment_analysis_tensorflow.ipynb: Convolutional Neural network via [TensorFlow] (https://www.tensorflow.org/)
 
 ## Academic Background
 * Dataset: [Maas et al. 2011] (http://ai.stanford.edu/~amaas/papers/wvSent_acl2011.pdf)
