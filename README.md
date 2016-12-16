@@ -2,7 +2,7 @@
 deep-learning-sentiment-analysis is an NLP project that compares three different models for binary sentiment classification. 
 
 ## Data
-deep-learning-sentiment-analysis uses Stanford's [Large Movie Review Dataset] (http://ai.stanford.edu/~amaas/data/sentiment/). This dataset was designed for NLP sentiment analysis and published by [Maas et al] (http://ai.stanford.edu/~amaas/papers/wvSent_acl2011.pdf). It consists of 12,500 positive train, negative train, positive test, and negative test reviews, along with 50,000 unlabeled reviews for unsupervised learning, for 100,000 total reviews.
+deep-learning-sentiment-analysis uses Stanford's [Large Movie Review Dataset] (http://ai.stanford.edu/~amaas/data/sentiment/). It consists of 12,500 positive train, negative train, positive test, and negative test reviews, along with 50,000 unlabeled reviews for unsupervised learning, for 100,000 total reviews. Each review is comprised of multiple sentences.
 
 ## Models
 deep-learning-sentiment-analysis utilizes three different models for sentiment analysis:
@@ -21,8 +21,9 @@ deep-learning-sentiment-analysis utilizes three different models for sentiment a
 deep-learning-sentiment-analysis is written in Python 2.7 in a Jupyter notebook and uses several common software libraries, most notably gensim and TFLearn. In order to run it, you  must install the follow dependencies:
 * [Python] (https://www.python.org/)
 * [Jupyter] (http://jupyter.org/)
+* [Stanford CoreNLP] (http://stanfordnlp.github.io/CoreNLP/)
 * [gensim] (https://radimrehurek.com/gensim/)
-* [TFLearn] (http://tflearn.org/)
+* [TensorFlow] (https://www.tensorflow.org/)
 * [NumPy] (http://www.numpy.org/)
 * [BeautifulSoup] (https://www.crummy.com/software/BeautifulSoup/)
 
